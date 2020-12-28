@@ -1,0 +1,2 @@
+# afrodots
+Atomsky's dotfiles
