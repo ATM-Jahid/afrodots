@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR SXHKD_SHELL:sh
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_pin:sudo\x20pacman\x20\x2dS
 SETUVAR _fish_abbr_pqi:pacman\x20\x2dQi
