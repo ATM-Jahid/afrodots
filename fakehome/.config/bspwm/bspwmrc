@@ -25,4 +25,3 @@ bspc config pointer_action3 resize_corner
 
 # Program rules
 bspc rule -a Zathura state=tiled
-bspc rule -a Gsimplecal state=floating
