@@ -11,15 +11,11 @@ super + {u,Return}
     {st,termite}
 
 # program launcher
-super + @space
-    dmenu_run
+super + {@space,x}
+    {dmenu_run,rofi -show run}
 
 alt + F1
-    rofi_run -r
-
-# shutdown, restart and lock prompt
-super + x
-    rofi_run -l
+    rofi -modi drun -show drun
 
 # make sxhkd reload its configuration files:
 super + Escape
