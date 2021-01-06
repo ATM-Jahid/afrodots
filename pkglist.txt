@@ -1,0 +1,93 @@
+# List of Packages
+
+## Shell
+fish
+
+## Version Control
+git
+
+## Webfile retrievers
+curl
+wget
+
+## Documentation
+man-db
+man-pages
+texinfo
+
+## Window Manager & Co
+bspwm
+sxhkd
+
+## Compositor
+picom
+
+## Wallpaper Setter
+nitrogen
+
+## Network
+networkmanager
+*networkmanager_dmenu
+
+## Audio
+pulseaudio
+pulseaudio-alsa
+pulseaudio-bluetooth
+pamixer
+pavucontrol
+
+## Bluetooth
+bluez-utils
+blueman
+
+## Terminal Emulators
+*st
+termite
+
+## Launchers
+dmenu
+rofi
+
+## Notification
+dunst
+
+## File Managers
+nnn
+thunar
+
+## Editor
+nvim
+
+## Browser
+firefox-developer-edition
+
+## Media Openers/Manipulators
+mpv
+sxiv
+gimp
+imagemagick
+ffmpeg
+
+## Book Reader
+zathura
+
+## System Information
+*polybar
+htop
+neofetch
+
+## Torrent
+transmission-cli
+
+## Fonts
+ttf-fira-code
+ttf-dejavu
+noto-fonts
+bdf-unifont
+gnu-free-fonts
+ttf-liberation
+wqy-zenhei
+*siji.pcf
+
+## Themes
+materia-gtk-theme
