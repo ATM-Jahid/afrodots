@@ -14,7 +14,7 @@ super + {u,Return}
 super + {@space,x}
     {dmenu_run,rofi -show run}
 
-alt + F1
+alt + @space
     rofi -modi drun -show drun
 
 # make sxhkd reload its configuration files:
