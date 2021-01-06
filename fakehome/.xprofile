@@ -1,0 +1,19 @@
+#!/bin/sh
+
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+
+export SXHKD_SHELL='/usr/bin/sh'
+export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
+
+# dpms, keyboard repeat, cursor icon
+xset dpms 600 1800 3600
+xset r rate 350 60
+xsetroot -cursor_name right_ptr
+
+# run a few necessary programs
+sxhkd &
+nitrogen --restore &
+picom &
+polybar topsy &
