@@ -1,29 +1,36 @@
 # List of Packages
 
-## Shell
+## Essentials
+base
+base-devel
+linux
+linux-firmware
+
+## Misc Term Utilities
+neovim
 fish
-
-## Version Control
 git
-
-## Webfile retrievers
+stow
+fzf
 curl
 wget
+openssh
 
 ## Documentation
 man-db
 man-pages
 texinfo
 
+## Xorg Groups
+xorg
+xorg-drivers
+
 ## Window Manager & Co
 bspwm
 sxhkd
-
-## Compositor
 picom
-
-## Wallpaper Setter
 nitrogen
+xlockmore
 
 ## Network
 networkmanager
@@ -44,32 +51,30 @@ blueman
 *st
 termite
 
-## Launchers
-dmenu
+## Launchers/Notifiers
 rofi
-
-## Notification
+dmenu
 dunst
+
+## Browser
+firefox-developer-edition
 
 ## File Managers
 nnn
 thunar
 
-## Editor
-nvim
-
-## Browser
-firefox-developer-edition
-
 ## Media Openers/Manipulators
 mpv
 sxiv
 gimp
-imagemagick
+scrot
 ffmpeg
+imagemagick
 
 ## Book Reader
 zathura
+zathura-pdf-mupdf
+zathura-djvu
 
 ## System Information
 *polybar
