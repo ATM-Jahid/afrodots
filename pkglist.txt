@@ -8,13 +8,20 @@ linux-firmware
 
 ## Misc Term Utilities
 neovim
-fish
 git
 stow
 fzf
 curl
 wget
 openssh
+
+## Shells & Emulators
+fish
+xonsh
+>python-prompt_toolkit
+>python-pygments
+*st
+termite
 
 ## Documentation
 man-db
@@ -47,10 +54,6 @@ pavucontrol
 bluez-utils
 blueman
 
-## Terminal Emulators
-*st
-termite
-
 ## Launchers/Notifiers
 rofi
 dmenu
@@ -59,8 +62,11 @@ dunst
 ## Browser
 firefox-developer-edition
 
-## File Managers
+## File Managers & Co
 nnn
+>*tabbed
+>xdotool
+broot
 thunar
 
 ## Media Openers/Manipulators
@@ -70,6 +76,7 @@ gimp
 scrot
 ffmpeg
 imagemagick
+ghostscript
 
 ## Book Reader
 zathura
