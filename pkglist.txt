@@ -21,7 +21,7 @@ xonsh
 >python-prompt_toolkit
 >python-pygments
 *st
-termite
+alacritty
 
 ## Documentation
 man-db
