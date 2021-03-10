@@ -1,11 +1,5 @@
-#!/bin/sh
-
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_DATA_HOME="$HOME/.local/share"
-
+# run sxhkd with Bourne shell
 export SXHKD_SHELL='/usr/bin/sh'
-export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
 
 # dpms, keyboard repeat, cursor icon
 xset dpms 600 1800 3600
