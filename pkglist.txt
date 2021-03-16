@@ -19,7 +19,6 @@ openssh
 fish
 xonsh
 >python-prompt_toolkit
->python-pygments
 *st
 alacritty
 
@@ -64,6 +63,7 @@ firefox-developer-edition
 
 ## File Managers & Co
 nnn
+>trash-cli
 >*tabbed
 >xdotool
 broot
