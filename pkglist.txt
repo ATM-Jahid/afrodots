@@ -13,6 +13,7 @@ stow
 fzf
 curl
 wget
+gnupg
 openssh
 
 ## Shells & Emulators
@@ -27,9 +28,10 @@ man-db
 man-pages
 texinfo
 
-## Xorg Groups
+## X Display Server
 xorg
 xorg-drivers
+xorg-xinit
 
 ## Window Manager & Co
 bspwm
@@ -85,6 +87,8 @@ zathura-djvu
 
 ## System Information
 *polybar
+>pacman-contrib
+>gsimplecal
 htop
 neofetch
 
@@ -99,7 +103,7 @@ bdf-unifont
 gnu-free-fonts
 ttf-liberation
 wqy-zenhei
-*siji.pcf
+*siji
 
 ## Themes
 materia-gtk-theme

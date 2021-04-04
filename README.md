@@ -2,13 +2,16 @@
 Atomsky's dotfiles
 
 ## Installation
-**afrodots** uses [Git](https://git-scm.com) along with [Stow](https://www.gnu.org/software/stow) to manage configuration files. After cloning this repository, issuing the following commands will populate the `$HOME` directory with symbolic links to the files stored in `afrodots/fakehome`.
+**afrodots** uses [Git](https://git-scm.com) along with [Stow](https://www.gnu.org/software/stow)
+to manage configuration files. After cloning this repository, issuing the following commands will
+populate the `$HOME` directory with symbolic links to the files stored in `afrodots/fakehome`.
 
 	cd /path/to/afrodots
 	stow -v --target=$HOME fakehome
 
 ## Packages
-`pkglist.txt` lists the packages to be installed from [Arch](https://archlinux.org) repositories. A short list of daily used programs follows.
+`pkglist.txt` lists the packages to be installed from [Arch](https://archlinux.org) repositories.
+A short list of daily used programs follows.
 
 - Shells: [fish](https://fishshell.com), [xonsh](https://xon.sh)
 - Emulators: [st](https://st.suckless.org), [alacritty](https://github.com/alacritty/alacritty)
