@@ -8,6 +8,6 @@ xsetroot -cursor_name right_ptr
 
 # run a few necessary programs
 sxhkd &
-nitrogen --restore &
+nitrogen --set-zoom-fill --random &
 picom &
 polybar topsy &
