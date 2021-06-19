@@ -17,50 +17,55 @@
 ;==========================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
 background = #222
 background-alt = #444
-;foreground = ${xrdb:color7:#222}
 foreground = #f7f7f7
 foreground-alt = #555
 primary = #ffd52a
 secondary = #e60053
 alert = #bd2c40
+teal = #008383
+port-gore = #232649
+casablanca = #f5b041
+green = #28b463
+acapulco = #7cb0a1
+red = #b90000
+purple = #8e44ad
+buttercup = #f1c40f
+jaffa = #ef8e38
+blue = #41a5f5
 
 [bar/topsy]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 25
-;offset-x = 1%
-;offset-y = 1%
+height = 23
 radius = 0.0
-fixed-center = false
+fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3
-line-color = #f00
+;line-size = 3
+;line-color = #f00
 
-border-size = 0
-border-color = #00aa88
+;border-size = 0
+;border-color = #00aa88
 
 padding-left = 0
-padding-right = 2
+padding-right = 1
 
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = noto sans mono:pixelsize=9;0
-font-1 = siji:pixelsize=10;0
+font-0 = "Noto Sans Mono:pixelsize=9;2"
+font-1 = "Siji:pixelsize=10;2"
 
 modules-left = bspwm pacman
-;modules-center = mpd
-modules-right = pulseaudio xbacklight wlan eth cpu memory temperature date
+modules-center = date
+modules-right = wlan eth cpu memory temperature xbacklight pulseaudio
 
 tray-position = right
 tray-padding = 2
-;tray-background = #0063ff
 
 wm-restack = bspwm
 
@@ -76,11 +81,11 @@ cursor-scroll = ns-resize
 type = internal/bspwm
 
 label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
+label-focused-background = ${colors.teal}
 label-focused-padding = 2
 
 label-occupied = %index%
+label-occupied-background = ${colors.port-gore}
 label-occupied-padding = 2
 
 label-urgent = %index%!
@@ -99,49 +104,20 @@ type = custom/script
 exec = ~/.config/polybar/updates-pacman.sh
 interval = 600
 
-[module/pulseaudio]
-type = internal/pulseaudio
+[module/date]
+type = internal/date
+interval = 5
 
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
-label-volume-foreground = ${root.foreground}
+date = " %a %e %b"
+date-alt = " %Y-%m-%d"
 
-label-muted =  muted
-label-muted-foreground = #666
+time = %H:%M
+time-alt = %H:%M:%S
 
-bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
+format-prefix = 
+format-prefix-foreground = ${colors.casablanca}
 
-[module/xbacklight]
-type = internal/xbacklight
-
-format = <label> <bar>
-label = BL %percentage%%
-
-bar-width = 10
-bar-indicator = |
-bar-indicator-foreground = #fff
-bar-indicator-font = 2
-bar-fill = ─
-bar-fill-font = 2
-bar-fill-foreground = #9f78e1
-bar-empty = ─
-bar-empty-font = 2
-bar-empty-foreground = ${colors.foreground-alt}
+label = %{A3:gsimplecal:}%date% %{F#f5b041}%{F-} %time%%{A}
 
 [module/wlan]
 type = internal/network
@@ -149,11 +125,9 @@ interface = wlo1
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #28b463
 label-connected = %{A1:networkmanager_dmenu &:}%essid%%{A}
 
 format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
 label-disconnected = %{A1:networkmanager_dmenu &:}Disconnected%{A}
 label-disconnected-foreground = ${colors.foreground-alt}
 
@@ -162,21 +136,18 @@ ramp-signal-1 = 
 ramp-signal-2 = 
 ramp-signal-3 = 
 ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground-alt}
+ramp-signal-foreground = ${colors.green}
 
 [module/eth]
 type = internal/network
 interface = virbr0
 interval = 3.0
 
-format-connected-underline = #55aa55
 format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
+format-connected-prefix-foreground = ${colors.acapulco}
 label-connected = %local_ip%
 
-format-disconnected =
 ;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
@@ -184,16 +155,14 @@ format-disconnected =
 type = internal/cpu
 interval = 2
 format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+format-prefix-foreground = ${colors.red}
 label = %percentage:2%%
 
 [module/memory]
 type = internal/memory
 interval = 2
 format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4babdc
+format-prefix-foreground = ${colors.purple}
 label = %percentage_used%%
 
 [module/temperature]
@@ -202,9 +171,7 @@ thermal-zone = 0
 warn-temperature = 60
 
 format = <ramp> <label>
-format-underline = #f1c40f
 format-warn = <ramp> <label-warn>
-format-warn-underline = ${self.format-underline}
 
 label = %temperature-c%
 label-warn = %temperature-c%
@@ -213,23 +180,53 @@ label-warn-foreground = ${colors.secondary}
 ramp-0 = 
 ramp-1 = 
 ramp-2 = 
-ramp-foreground = ${colors.foreground-alt}
+ramp-foreground = ${colors.buttercup}
 
-[module/date]
-type = internal/date
-interval = 5
+[module/xbacklight]
+type = internal/xbacklight
 
-date =
-date-alt = " %Y-%m-%d"
+format = <ramp> <label>
+label = %percentage%%
 
-time = %H:%M
-time-alt = %H:%M:%S
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-foreground = ${colors.jaffa}
 
-format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #cb55cb
+[module/pulseaudio]
+type = internal/pulseaudio
 
-label = %{A3:gsimplecal:}%date% %time%%{A}
+format-volume = <ramp-volume> <bar-volume> <label-volume>
+label-volume = %percentage%%
+label-volume-foreground = ${root.foreground}
+
+label-muted =  muted
+label-muted-foreground = #666
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-3 = 
+ramp-volume-4 = 
+ramp-volume-foreground = ${colors.blue}
+
+bar-volume-width = 7
+bar-volume-foreground-0 = #5e37f3
+bar-volume-foreground-1 = #9d00d1
+bar-volume-foreground-2 = #bc00ae
+bar-volume-foreground-3 = #cc008c
+bar-volume-foreground-4 = #d1006d
+bar-volume-foreground-5 = #ce0052
+bar-volume-foreground-6 = #c60a3b
+bar-volume-gradient = true
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = |
+bar-volume-fill-font = 2
+bar-volume-empty = |
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
 
 ;[module/battery]
 ;type = internal/battery
