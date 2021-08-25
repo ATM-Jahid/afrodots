@@ -4,10 +4,10 @@
 *.foreground:  #9cc2c3
 *.background:  #001e26
 *.alpha: 0.8
-! ! Black 
+! ! Black
 *.color0:      #002831
 *.color8:      #006488
-! ! Red 
+! ! Red
 *.color1:      #d11c24
 *.color9:      #f5163b
 ! ! Green

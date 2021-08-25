@@ -32,6 +32,7 @@ texinfo
 xorg
 xorg-drivers
 xorg-xinit
+xclip
 
 ## Window Manager & Co
 bspwm
@@ -75,8 +76,8 @@ thunar
 mpv
 sxiv
 gimp
-scrot
 ffmpeg
+flameshot
 imagemagick
 ghostscript
 
