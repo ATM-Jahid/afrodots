@@ -87,10 +87,11 @@ zathura-pdf-mupdf
 zathura-djvu
 
 ## System Information
-*polybar
+tint2
 >pacman-contrib
 >gsimplecal
 htop
+conky
 neofetch
 
 ## Torrent

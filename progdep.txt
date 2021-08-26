@@ -1,0 +1,9 @@
+# Lammps
+fftw
+openmpi
+cmake
+
+# MedeA
+libxss
+glu
+freeglut
