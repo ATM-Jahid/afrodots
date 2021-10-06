@@ -39,7 +39,7 @@ bspwm
 sxhkd
 picom
 nitrogen
-xlockmore
+physlock
 
 ## Network
 networkmanager
