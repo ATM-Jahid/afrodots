@@ -14,5 +14,5 @@ xsetroot -cursor_name right_ptr
 sxhkd &
 nitrogen --set-zoom-fill --random &
 picom &
-tint2 &
-conky &
+tint2 -c $HOME/.config/tint2/midday.tint2rc &
+conky --config=$HOME/.config/conky/midday.conf &
