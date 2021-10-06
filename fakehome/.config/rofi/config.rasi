@@ -1,9 +1,5 @@
-/*
- * sidetab-adapta theme,
- * based on sidetab theme by deadguy.
- *
- * This theme has been dedicated to the public domain.
- *
+/* Atomsky's rofi config
+ * based on sidetab-adapta theme
  */
 
 configuration {
@@ -38,78 +34,87 @@ configuration {
         active-background:          @accent-color;
 }
 
-#window {
+window {
         anchor:   west;
         location: west;
+        padding:  0px;
         width:    384px;
         height:   100%;
 }
 
-#mainbox {
+mainbox {
         children: [ entry, listview, mode-switcher ];
 }
 
-#entry {
+entry {
         expand: false;
         margin: 8px;
 }
 
-#element {
+textbox {
+        text-color: yellow;
+}
+
+listview {
+        scrollbar: false;
+}
+
+element {
         padding: 8px;
 }
 
-#element.normal.normal {
+element.normal.normal {
         background-color: @normal-background;
         text-color:       @normal-foreground;
 }
 
-#element.normal.urgent {
+element.normal.urgent {
         background-color: @urgent-background;
         text-color:       @urgent-foreground;
 }
 
-#element.normal.active {
+element.normal.active {
         background-color: @active-background;
         text-color:       @active-foreground;
 }
 
-#element.selected.normal {
+element.selected.normal {
         background-color: @selected-normal-background;
         text-color:       @selected-normal-foreground;
         border:           0 4px solid 0 0;
         border-color:     @accent2-color;
 }
 
-#element.selected.urgent {
+element.selected.urgent {
         background-color: @selected-urgent-background;
         text-color:       @selected-urgent-foreground;
 }
 
-#element.selected.active {
+element.selected.active {
         background-color: @selected-active-background;
         text-color:       @selected-active-foreground;
 }
 
-#element.alternate.normal {
+element.alternate.normal {
         background-color: @normal-background;
         text-color:       @normal-foreground;
 }
 
-#element.alternate.urgent {
+element.alternate.urgent {
         background-color: @urgent-background;
         text-color:       @urgent-foreground;
 }
 
-#element.alternate.active {
+element.alternate.active {
         background-color: @active-background;
         text-color:       @active-foreground;
 }
 
-#button {
+button {
         padding: 8px;
 }
 
-#button.selected {
+button.selected {
         background-color: @active-background;
         text-color:       @background-color;
 }
