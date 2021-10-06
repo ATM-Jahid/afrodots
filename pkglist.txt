@@ -32,6 +32,7 @@ texinfo
 xorg
 xorg-drivers
 xorg-xinit
+brightnessctl
 xclip
 
 ## Window Manager & Co
