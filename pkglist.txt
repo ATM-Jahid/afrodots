@@ -91,7 +91,7 @@ zathura-djvu
 tint2
 >pacman-contrib
 >gsimplecal
-htop
+btop
 conky
 neofetch
 
