@@ -1,9 +1,9 @@
-*cursorColor: #f34a00
-*pointerColorBackground: #586e75
-*pointerColorForeground: #93a1a1
-*.foreground:  #9cc2c3
+! ! Font
+*.font: Fira Code:pixelsize=12
+! ! Special
 *.background:  #001e26
-*.alpha: 0.8
+*.foreground:  #9cc2c3
+*.cursorColor: #f34a00
 ! ! Black
 *.color0:      #002831
 *.color8:      #006488
@@ -30,5 +30,14 @@
 *.color15:     #fcf4dc
 ! ! Bold, Italic, Underline
 *.colorBD:     #b5d5d3
-! ! Font
-*.font: Fira Code:pixelsize=12
+! ! Opacity
+*.alpha: 0.8
+
+! ! Some sensible defaults
+!Xft.dpi: 101
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb

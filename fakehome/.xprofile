@@ -1,10 +1,6 @@
 # run sxhkd with Bourne shell
 export SXHKD_SHELL='/usr/bin/sh'
 
-# use nvidia graphics only
-xrandr --setprovideroutputsource modesetting NVIDIA-0
-xrandr --auto
-
 # dpms, keyboard repeat, cursor icon
 xset dpms 600 1800 3600
 xset r rate 350 60
