@@ -125,7 +125,7 @@ interface = wlo1
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-label-connected = %{A1:networkmanager_dmenu &:}%essid%%{A}
+label-connected = %{A1:networkmanager_dmenu &:}%downspeed%%{A}
 
 format-disconnected = <label-disconnected>
 label-disconnected = %{A1:networkmanager_dmenu &:}Disconnected%{A}
@@ -163,7 +163,7 @@ type = internal/memory
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.purple}
-label = %percentage_used%%
+label = %gb_used%
 
 [module/temperature]
 type = internal/temperature
