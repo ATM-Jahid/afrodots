@@ -8,3 +8,5 @@
 	helper = cache
 [alias]
 	loag = log --oneline --all --graph
+[init]
+	defaultBranch = main
