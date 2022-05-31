@@ -1,6 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR __fish_initialized:3100
+SETUVAR __fish_initialized:3400
 SETUVAR _fish_abbr_pin:sudo\x20pacman\x20\x2dS
 SETUVAR _fish_abbr_pqi:pacman\x20\x2dQq\x20\x7c\x20fzf\x20\x2d\x2dmulti\x20\x2d\x2dpreview\x3d\x27pacman\x20\x2dQil\x20\x7b\x7d\x27
 SETUVAR _fish_abbr_psr:pacman\x20\x2dSlq\x20\x7c\x20fzf\x20\x2d\x2dmulti\x20\x2d\x2dpreview\x3d\x27pacman\x20\x2dSi\x20\x7b\x7d\x3b\x20pacman\x20\x2dFl\x20\x7b\x7d\x27
@@ -37,3 +37,4 @@ SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
+SETUVAR fish_pager_color_selected_background:\x2dr

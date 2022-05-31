@@ -102,11 +102,10 @@ transmission-cli
 ttf-fira-code
 ttf-dejavu
 noto-fonts
-bdf-unifont
+ttf-unifont
 gnu-free-fonts
 ttf-liberation
 wqy-zenhei
-*siji
 
 ## Themes
 materia-gtk-theme
