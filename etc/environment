@@ -4,5 +4,5 @@
 # Syntax: simple "KEY=VAL" pairs on separate lines
 #
 EDITOR=nvim
-PAGER=less
+PAGER="less -R"
 BROWSER=firefox-developer-edition

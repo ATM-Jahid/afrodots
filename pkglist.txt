@@ -44,12 +44,12 @@ physlock
 
 ## Network
 networkmanager
-*networkmanager_dmenu
 
 ## Audio
-pulseaudio
-pulseaudio-alsa
-pulseaudio-bluetooth
+pipewire
+pipewire-pulse
+pipewire-alsa
+wireplumber
 pamixer
 pavucontrol
 
