@@ -188,7 +188,7 @@ startup_notifications = 1
 launcher_tooltip = 1
 launcher_item_app = /usr/share/applications/Alacritty.desktop
 launcher_item_app = /usr/share/applications/onboard.desktop
-launcher_item_app = /usr/share/applications/firefox-developer-edition.desktop
+launcher_item_app = /usr/share/applications/firefoxdeveloperedition.desktop
 launcher_item_app = /usr/share/applications/jgmenu.desktop
 
 #-------------------------------------
