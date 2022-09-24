@@ -10,4 +10,4 @@ xsetroot -cursor_name right_ptr
 sxhkd &
 nitrogen --set-zoom-fill --random &
 picom &
-polybar topsy &
+tint2 -c $HOME/.config/tint2/lefty.tint2rc &

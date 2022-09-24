@@ -1,5 +1,5 @@
 ! ! Font
-*.font: Fira Code:pixelsize=12
+*.font: Fira Code:pixelsize=18
 ! ! Special
 *.background:  #001e26
 *.foreground:  #9cc2c3
@@ -34,7 +34,7 @@
 *.alpha: 0.8
 
 ! ! Some sensible defaults
-Xft.dpi: 101
+Xft.dpi: 141
 Xft.autohint: 0
 Xft.lcdfilter: lcddefault
 Xft.hintstyle: hintfull
