@@ -44,12 +44,12 @@ physlock
 
 ## Network
 networkmanager
-*networkmanager_dmenu
 
 ## Audio
-pulseaudio
-pulseaudio-alsa
-pulseaudio-bluetooth
+pipewire
+pipewire-pulse
+pipewire-alsa
+wireplumber
 pamixer
 pavucontrol
 
@@ -102,11 +102,10 @@ transmission-cli
 ttf-fira-code
 ttf-dejavu
 noto-fonts
-bdf-unifont
+ttf-unifont
 gnu-free-fonts
 ttf-liberation
 wqy-zenhei
-*siji
 
 ## Themes
 materia-gtk-theme

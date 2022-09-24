@@ -2,9 +2,11 @@
 	name = ATM Jahid Hasan
 	email = atmjahidhasan@gmail.com
 [merge]
-	tool = nvimdiff
 	conflictstyle = diff3
-[mergetool "nvimdiff"]
-	cmd = nvim -d $LOCAL $BASE $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+	tool = nvimdiff3
 [credential]
 	helper = cache
+[alias]
+	loag = log --oneline --all --graph
+[init]
+	defaultBranch = main

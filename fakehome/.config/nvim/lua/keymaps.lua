@@ -4,8 +4,8 @@ local map = vim.api.nvim_set_keymap
 options = {noremap = true}
 
 -- split windows
-map('n', ',h', ':split<CR>', options)
-map('n', ',v', ':vsplit<CR>', options)
+map('n', '<space>h', ':split<CR>', options)
+map('n', '<space>v', ':vsplit<CR>', options)
 
 -- move to splits
 map('n', '<C-h>', ':wincmd h<CR>', options)

@@ -1,12 +1,13 @@
 # TODO
 Things that I need to implement.
 
-- Power saver option
-- R Markdown workflow
-- Neovim plugins
-	- LSP
-	- FZF
-	- Treesitter
-	- LaTeX Preview
+- Fix branching hell
+- Update pkglist
+	- Python libraries
+	- PipeWire
+- Fix pipewire bootup issue
+- Streamline nnn plugins
+- Switch to Hyprland
+- Vertical bar (Waybar or Eww)
+- Neovim plugins & ricing
 - Xonsh profile
-- Streamlining
