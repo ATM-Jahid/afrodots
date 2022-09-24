@@ -1,5 +1,14 @@
 #!/bin/sh
 
+# run sxhkd with sh
+export SXHKD_SHELL='/usr/bin/sh'
+
+# run a few necessary programs
+sxhkd &
+nitrogen --set-zoom-fill --random &
+picom &
+tint2 -c $HOME/.config/tint2/lefty.tint2rc &
+
 # Set some bsp specific stuff
 bspc monitor -d 1 2 3 4 5 6 7 8 9 0
 
