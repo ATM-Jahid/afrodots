@@ -80,7 +80,6 @@ gimp
 ffmpeg
 flameshot
 imagemagick
-ghostscript
 
 ## Book Reader
 zathura
@@ -106,6 +105,7 @@ ttf-unifont
 gnu-free-fonts
 ttf-liberation
 wqy-zenhei
+otf-font-awesome
 
 ## Themes
 materia-gtk-theme
