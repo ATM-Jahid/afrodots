@@ -1,13 +1,12 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    min-height: 0;
+    font-size: 14px;
 }
 
 window#waybar {
     background-color: rgba(43, 48, 59, 0.9);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    border-bottom: 3px solid rgba(100, 114, 125, 0.9);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -36,7 +35,7 @@ window#waybar.chromium {
 }
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 0px;
     background-color: transparent;
     color: #ffffff;
     /* Use box-shadow instead of border so the text isn't offset */
@@ -80,13 +79,13 @@ window#waybar.chromium {
 #mode,
 #idle_inhibitor,
 #mpd {
-    padding: 0 10px;
+    padding: 0px;
     color: #ffffff;
 }
 
 #window,
 #workspaces {
-    margin: 0 4px;
+    margin: 0px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -101,6 +100,7 @@ window#waybar.chromium {
 
 #clock {
     background-color: #64727D;
+    font-weight: bold;
 }
 
 #battery {
@@ -238,21 +238,21 @@ label:focus {
 #language {
     background: #00b093;
     color: #740864;
-    padding: 0 5px;
-    margin: 0 5px;
+    padding: 0px;
+    margin: 0px;
     min-width: 16px;
 }
 
 #keyboard-state {
     background: #97e1ad;
     color: #000000;
-    padding: 0 0px;
-    margin: 0 5px;
+    padding: 0px;
+    margin: 0px;
     min-width: 16px;
 }
 
 #keyboard-state > label {
-    padding: 0 5px;
+    padding: 0px;
 }
 
 #keyboard-state > label.locked {
