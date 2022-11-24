@@ -1,8 +1,8 @@
 {
-    // "layer": "top", // Waybar at top layer
+    "layer": "top", // Waybar at top layer
     "position": "left", // Waybar position (top|bottom|left|right)
     // "height": 22, // Waybar height (to be removed for auto height)
-    "width": 22, // Waybar width
+    "width": 30, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["tray", "wlr/taskbar"],
@@ -77,7 +77,7 @@
         "timezone": "America/New_York",
         "format": "{:%H\n%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%y\n%m\n%d}"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -106,9 +106,9 @@
             "critical": 15
         },
         "format": "{capacity}\n{icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
+        "format-charging": "{capacity}\n",
+        "format-plugged": "{capacity}\n",
+        "format-alt": "{time}\n{icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
