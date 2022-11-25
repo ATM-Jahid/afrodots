@@ -23,7 +23,7 @@ function n --wraps nnn --description 'support nnn quit and change directory'
     set -x NNN_BMS "c:~/Documents/Coding;w:~/Pictures/WallE;b:~/Documents/Books"
     set -x NNN_PLUG "f:preview-tabbed;t:preview-tui"
 
-    nnn -acdHT v $argv
+    nnn -aAcdHT v $argv
 
     if test -e $NNN_TMPFILE
         source $NNN_TMPFILE

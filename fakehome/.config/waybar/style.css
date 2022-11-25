@@ -79,7 +79,7 @@ window#waybar.chromium {
 #mode,
 #idle_inhibitor,
 #mpd {
-    padding: 0px;
+    padding: 3px;
     color: #ffffff;
 }
 
@@ -99,13 +99,15 @@ window#waybar.chromium {
 }
 
 #clock {
-    background-color: #64727D;
+    background-color: #495ee5;
+    font-size: 24px;
     font-weight: bold;
+    color: #dddddd;
 }
 
 #battery {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #ffdc7d;
+    color: #111111;
 }
 
 #battery.charging, #battery.plugged {
@@ -160,12 +162,12 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
+    background-color: #f53c3c;
+    color: #bbbbbb;
+    font-size: 18px;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
     color: #2a5c45;
 }
 
