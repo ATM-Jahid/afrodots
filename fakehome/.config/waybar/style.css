@@ -176,6 +176,15 @@ label:focus {
     opacity: 0.7;
 }
 
+#custom-ws {
+    background-color: #66aaff;
+    padding: 10px;
+}
+
+#custom-pacman {
+    background-color: #66aa99;
+}
+
 #custom-media {
     background-color: #66cc99;
     color: #2a5c45;

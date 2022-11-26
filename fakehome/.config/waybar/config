@@ -5,9 +5,9 @@
     "width": 30, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["tray", "wlr/taskbar"],
+    "modules-left": ["tray", "wlr/taskbar", "custom/ws"],
     //"modules-center": ["sway/window"],
-    "modules-right": ["pulseaudio", "battery", "clock"],
+    "modules-right": ["custom/pacman", "pulseaudio", "battery", "clock"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -143,6 +143,19 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
+    },
+    "custom/ws": {
+        "format": "{}",
+        "exec": "$HOME/.config/waybar/ws-hypr.sh",
+        "exec-if": "exit 0",
+        "signal": 8
+    },
+    "custom/pacman": {
+        "format": "{}\n",
+        "interval": 1800,
+        "exec": "checkupdates | wc -l",
+        "exec-if": "exit 0",
+        "signal": 8
     },
     "custom/media": {
         "format": "{icon} {}",
