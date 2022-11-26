@@ -2,7 +2,7 @@
 
 function handle {
   if [[ ${1:0:9} == "workspace" ]]; then
-    echo "$1" | cut --delimiter='>' -f3
+    echo "$1" | cut -d'>' -f3
   fi
 }
 
