@@ -1,4 +1,3 @@
 # dpms, keyboard repeat, cursor icon
 xset dpms 600 1800 3600
-xset r rate 350 60
 xsetroot -cursor_name right_ptr
