@@ -12,7 +12,7 @@
 
 ###############################################################
 # Modal navigation
-modal = true
+#modal = true
 
 ###############################################################
 # Default flags
@@ -78,33 +78,28 @@ default_flags = "gsT"
 # The /path/to/nuke does not work if it contains ~ or $HOME
 # Putting a symlink to nuke in the PATH should work
 [[verbs]]
-invocation = "edit"
-key = "enter"
-execution = "nuke {file}"
-apply_to = "file"
-leave_broot = false
-
-[[verbs]]
-invocation = "edit"
-key = "l"
+invocation = "open_nuke"
+keys = [ "enter", "alt-l" ]
 execution = "nuke {file}"
 apply_to = "file"
 leave_broot = false
 
 [[verbs]]
 invocation = "create {subpath}"
+shortcut = "cr"
 execution = "$EDITOR {directory}/{subpath}"
 leave_broot = false
 
-# If $PAGER isn't set on your computer, you should either set it
-#  or just replace it with your viewer of choice in the 'execution'
-#  pattern.
-# Example:
-#  execution = "less {file}"
 [[verbs]]
-name = "view"
+invocation = "edit"
+execution = "$EDITOR {file}"
+apply_to = "file"
+leave_broot = false
+
+[[verbs]]
 invocation = "view"
 execution = "$PAGER {file}"
+apply_to = "file"
 leave_broot = false
 
 # Change panels the vim way
@@ -116,24 +111,60 @@ execution = ":panel_left"
 key = "ctrl-l"
 execution = ":panel_right"
 
+# Navigation experiment
+[[verbs]]
+key = "alt-h"
+execution = ":parent"
+
+[[verbs]]
+key = "alt-j"
+execution = ":line_down"
+
+[[verbs]]
+key = "alt-k"
+execution = ":line_up"
+
+[[verbs]]
+key = "alt-l"
+apply_to = "directory"
+execution = ":focus"
+
+# Redefine toggle_hidden
+[[verbs]]
+key = "alt-."
+execution = ":toggle_hidden"
+
+# Redefine staging
+[[verbs]]
+key = "alt-;"
+cmd = ":toggle_stage;:line_down"
+
 # If you develop using git, you might like to often switch
 # to the "git status" filter:
 [[verbs]]
-key = "ctrl-g"
+key = "alt-g"
 execution = ":toggle_git_status"
 
 # You can reproduce the bindings of Norton Commander
 # on copying or moving to the other panel:
-#
 [[verbs]]
-key = "F5"
+key = "alt-c"
 external = "cp -r {file} {other-panel-directory}"
 leave_broot = false
 
 [[verbs]]
-key = "F6"
+key = "alt-v"
 external = "mv {file} {other-panel-directory}"
 leave_broot = false
+
+# emacs bindings
+[[verbs]]
+key = "ctrl-u"
+execution = ":input_clear"
+
+[[verbs]]
+key = "ctrl-w"
+execution = ":input_del_word_left"
 
 ###############################################################
 # Skin
