@@ -1,7 +1,13 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 14px;
+    font-size: 8px;
+    min-width: 0px;
+	padding: 0px;
+}
+
+tooltip * {
+	font-size: 14px;
 }
 
 window#waybar {
@@ -25,15 +31,6 @@ window#waybar.solo {
 }
 */
 
-window#waybar.termite {
-    background-color: #3F3F3F;
-}
-
-window#waybar.chromium {
-    background-color: #000000;
-    border: none;
-}
-
 #workspaces button {
     padding: 0px;
     background-color: transparent;
@@ -42,7 +39,7 @@ window#waybar.chromium {
     box-shadow: inset 0 -3px transparent;
     /* Avoid rounded borders under each workspace name */
     border: none;
-    border-radius: 0;
+    border-radius: 5px;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -99,20 +96,21 @@ window#waybar.chromium {
 }
 
 #clock {
-    background-color: #495ee5;
-    font-size: 24px;
+    background-color: #4c566a;
+    font-size: 16px;
     font-weight: bold;
     color: #dddddd;
 }
 
 #battery {
-    background-color: #ffdc7d;
-    color: #111111;
+    background-color: #434c5e;
+    font-size: 16px;
+    color: #dddddd;
 }
 
 #battery.charging, #battery.plugged {
     color: #ffffff;
-    background-color: #26A65B;
+    background-color: #85bcbb;
 }
 
 @keyframes blink {
@@ -162,13 +160,18 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #f53c3c;
+    background-color: #3b4252;
     color: #bbbbbb;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 #pulseaudio.muted {
     color: #2a5c45;
+    font-size: 16px;
+}
+
+#taskbar {
+	min-width: 24px;
 }
 
 #taskbar button.active {
@@ -182,7 +185,7 @@ label:focus {
 }
 
 #custom-pacman {
-    background-color: #66aa99;
+    background-color: #2e3440;
 }
 
 #custom-media {
@@ -209,6 +212,7 @@ label:focus {
 
 #tray {
     background-color: #2980b9;
+    min-width: 0px;
 }
 
 #tray > .passive {

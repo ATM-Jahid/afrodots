@@ -2,12 +2,12 @@
     "layer": "top", // Waybar at top layer
     "position": "left", // Waybar position (top|bottom|left|right)
     // "height": 22, // Waybar height (to be removed for auto height)
-    "width": 30, // Waybar width
+    "width": 24, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["tray", "wlr/taskbar", "custom/ws"],
+    "modules-left": ["tray", "wlr/taskbar"],
     //"modules-center": ["sway/window"],
-    "modules-right": ["custom/pacman", "pulseaudio", "battery", "clock"],
+    "modules-right": ["pulseaudio", "battery", "clock"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -142,7 +142,8 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pamixer -t",
+        "on-click-right": "pavucontrol"
     },
     "custom/ws": {
         "format": "{}",
@@ -151,7 +152,7 @@
         "signal": 8
     },
     "custom/pacman": {
-        "format": "{}\n",
+        "format": " {}\n",
         "interval": 1800,
         "exec": "checkupdates | wc -l",
         "exec-if": "exit 0",
@@ -171,7 +172,7 @@
     },
     "wlr/taskbar": {
         "format": "{icon}",
-        "icon-size": 16,
+        "icon-size": 18,
         "on-click": "activate",
         "app_ids-mapping": {
                 "firefoxdeveloperedition": "firefox-developer-edition"

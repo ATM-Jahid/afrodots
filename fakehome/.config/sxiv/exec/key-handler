@@ -1,9 +1,15 @@
 #!/bin/sh
-while read file
-do
-        case "$1" in
-        "s")
-                nitrogen --save --set-zoom-fill "$file" &&
-                notify-send -i "$file" "Wallpaper changed!" ;;
-        esac
+while read file; do
+	case "$1" in
+	"s")
+		nitrogen --save --set-zoom-fill "$file" &&
+			notify-send -i "$file" "Wallpaper changed!"
+		;;
+	"w")
+		pkill swaybg
+		swaybg -m fill -i "$file" &
+		disown &&
+			notify-send -i "$file" "Wallpaper changed!"
+		;;
+	esac
 done
