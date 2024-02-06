@@ -9,11 +9,12 @@ nitrogen --set-zoom-fill --random &
 picom &
 
 if [[ $HOSTNAME == coulter ]]; then
-	# tint2 and conky for dual monitor
+	# tint2 and conky for dual monitors
 	tint2 -c $HOME/.config/tint2/midday.tint2rc &
 	conky --config=$HOME/.config/conky/midday.conf &
 	bspc monitor DP-4 -d 1 2 3 4 5
 	bspc monitor DP-5 -d 6 7 8 9 0
+	bspc config -m DP-4 right_padding 100
 else
 	# only tint2 for single monitor devices
 	tint2 -c $HOME/.config/tint2/lefty.tint2rc &
@@ -23,7 +24,6 @@ fi
 # bspc config settings
 bspc config border_width 2
 bspc config window_gap 0
-bspc config -m DP-4 right_padding 100
 
 bspc config split_ratio 0.54
 bspc config borderless_monocle true
