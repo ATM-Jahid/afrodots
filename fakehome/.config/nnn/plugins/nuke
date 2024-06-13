@@ -185,7 +185,7 @@ handle_extension() {
 		;;
 
 	## PDF
-	pdf)
+	pdf | djvu)
 		handle_pdf
 		exit 1
 		;;
@@ -471,7 +471,7 @@ handle_mime() {
 		;;
 
 	## Text
-	text/* | */xml | */javascript)
+	text/* | */xml | */javascript | */json)
 		"$EDITOR" "${FPATH}"
 		exit 0
 		;;

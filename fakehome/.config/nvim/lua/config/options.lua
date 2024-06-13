@@ -9,3 +9,4 @@ vim.opt.conceallevel = 0
 vim.opt.wrap = true
 vim.opt.mouse = ""
 vim.opt.virtualedit = ""
+vim.opt.formatoptions = "jcroqlt"

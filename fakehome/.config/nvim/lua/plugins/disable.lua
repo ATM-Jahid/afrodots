@@ -9,4 +9,7 @@ return {
   { "echasnovski/mini.indentscope", enabled = false },
   { "folke/todo-comments.nvim", enabled = false },
   { "RRethy/vim-illuminate", enabled = false },
+  { "rafamadriz/friendly-snippets", enabled = false },
+  { "nvim-treesitter/nvim-treesitter-context", enabled = false },
+  { "nvim-treesitter/nvim-treesitter-textobjects", enabled = false },
 }

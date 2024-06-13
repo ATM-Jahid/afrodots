@@ -5,7 +5,7 @@
     "width": 24, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["tray", "wlr/taskbar"],
+    "modules-left": ["tray", "hyprland/workspaces"],
     //"modules-center": ["sway/window"],
     "modules-right": ["pulseaudio", "battery", "clock"],
     // Modules configuration
@@ -24,6 +24,16 @@
     //         "default": ""
     //     }
     // },
+    "hyprland/workspaces": {
+        "format": "<sub>{icon}</sub>\n{windows}\n",
+        "format-window-separator": "\n",
+        "window-rewrite-default": "",
+        "window-rewrite": {
+            "class<foot>": "",
+            "class<firefoxdeveloperedition>": "",
+            "class<FreeTube>": "",
+        },
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -32,9 +42,6 @@
             "locked": "",
             "unlocked": ""
         }
-    },
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
     },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
