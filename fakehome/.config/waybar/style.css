@@ -1,7 +1,7 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 18px;
+    font-family: JetBrainsMono Nerd Font Propo, FontAwesome, sans-serif;
+    font-size: 15px;
     min-width: 0px;
     padding: 0px;
 }
@@ -97,14 +97,14 @@ window#waybar.solo {
 
 #clock {
     background-color: #4c566a;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     color: #dddddd;
 }
 
 #battery {
     background-color: #434c5e;
-    font-size: 16px;
+    font-size: 15px;
     color: #dddddd;
 }
 
@@ -162,12 +162,12 @@ label:focus {
 #pulseaudio {
     background-color: #3b4252;
     color: #bbbbbb;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 #pulseaudio.muted {
     color: #2a5c45;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 #taskbar {

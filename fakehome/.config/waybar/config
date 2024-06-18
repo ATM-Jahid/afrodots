@@ -1,7 +1,6 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "left", // Waybar position (top|bottom|left|right)
-    // "height": 22, // Waybar height (to be removed for auto height)
     "width": 24, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
@@ -9,73 +8,64 @@
     //"modules-center": ["sway/window"],
     "modules-right": ["pulseaudio", "battery", "clock"],
     // Modules configuration
-    // "sway/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
     "hyprland/workspaces": {
         "format": "<sub>{icon}</sub>\n{windows}\n",
         "format-window-separator": "\n",
         "window-rewrite-default": "",
         "window-rewrite": {
-            "class<foot>": "",
-            "class<firefoxdeveloperedition>": "",
-            "class<FreeTube>": "",
+            "class<foot>": "",
+            "class<Alacritty>": "",
+            "class<firefoxdeveloperedition>": "󰈹",
+            "class<vivaldi-stable>": "",
+            "class<FreeTube>": "",
+            "class<org.pwmt.zathura>": "",
+            "class<.*Gimp.*>": "",
+            "class<krita>": "",
+            "class<org.inkscape.Inkscape>": "󰫨",
         },
     },
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 2,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
-    },
+    //"keyboard-state": {
+    //    "numlock": true,
+    //    "capslock": true,
+    //    "format": "{name} {icon}",
+    //    "format-icons": {
+    //        "locked": "",
+    //        "unlocked": ""
+    //    }
+    //},
+    //"mpd": {
+    //    "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+    //    "format-disconnected": "Disconnected ",
+    //    "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+    //    "unknown-tag": "N/A",
+    //    "interval": 2,
+    //    "consume-icons": {
+    //        "on": " "
+    //    },
+    //    "random-icons": {
+    //        "off": "<span color=\"#f53c3c\"></span> ",
+    //        "on": " "
+    //    },
+    //    "repeat-icons": {
+    //        "on": " "
+    //    },
+    //    "single-icons": {
+    //        "on": "1 "
+    //    },
+    //    "state-icons": {
+    //        "paused": "",
+    //        "playing": ""
+    //    },
+    //    "tooltip-format": "MPD (connected)",
+    //    "tooltip-format-disconnected": "MPD (disconnected)"
+    //},
+    //"idle_inhibitor": {
+    //    "format": "{icon}",
+    //    "format-icons": {
+    //        "activated": "",
+    //        "deactivated": ""
+    //    }
+    //},
     "tray": {
         "icon-size": 16,
         "spacing": 10
@@ -107,26 +97,26 @@
                     "on-scroll-down": "shift_down"
                     }
     },
-    "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false
-    },
-    "memory": {
-        "format": "{}% "
-    },
-    "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
-    },
-    "backlight": {
-        // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
-        "format-icons": ["", ""]
-    },
+    //"cpu": {
+    //    "format": "{usage}% ",
+    //    "tooltip": false
+    //},
+    //"memory": {
+    //    "format": "{}% "
+    //},
+    //"temperature": {
+    //    // "thermal-zone": 2,
+    //    // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    //    "critical-threshold": 80,
+    //    // "format-critical": "{temperatureC}°C {icon}",
+    //    "format": "{temperatureC}°C {icon}",
+    //    "format-icons": ["", "", ""]
+    //},
+    //"backlight": {
+    //    // "device": "acpi_video1",
+    //    "format": "{percent}% {icon}",
+    //    "format-icons": ["", ""]
+    //},
     "battery": {
         "states": {
             // "good": 95,
@@ -136,7 +126,7 @@
         "format": "{capacity}\n{icon}",
         "format-charging": "{capacity}\n",
         "format-plugged": "{capacity}\n",
-        "format-alt": "{time}\n{icon}",
+        //"format-alt": "{time}\n{icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
@@ -144,21 +134,21 @@
     "battery#bat2": {
         "bat": "BAT2"
     },
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
-    },
+    //"network": {
+    //    // "interface": "wlp2*", // (Optional) To force the use of this interface
+    //    "format-wifi": "{essid} ({signalStrength}%) ",
+    //    "format-ethernet": "{ipaddr}/{cidr} ",
+    //    "tooltip-format": "{ifname} via {gwaddr} ",
+    //    "format-linked": "{ifname} (No IP) ",
+    //    "format-disconnected": "Disconnected ⚠",
+    //    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    //},
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}\n{icon}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " ",
+        "format-muted": "",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
@@ -173,38 +163,38 @@
         "on-click": "pamixer -t",
         "on-click-right": "pavucontrol"
     },
-    "custom/ws": {
-        "format": "{}",
-        "exec": "$HOME/.config/waybar/ws-hypr.sh",
-        "exec-if": "exit 0",
-        "signal": 8
-    },
-    "custom/pacman": {
-        "format": " {}\n",
-        "interval": 1800,
-        "exec": "checkupdates | wc -l",
-        "exec-if": "exit 0",
-        "signal": 8
-    },
-    "custom/media": {
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    },
-    "wlr/taskbar": {
-        "format": "{icon}",
-        "icon-size": 18,
-        "on-click": "activate",
-        "app_ids-mapping": {
-                "firefoxdeveloperedition": "firefox-developer-edition"
-        }
-    }
+    //"custom/ws": {
+    //    "format": "{}",
+    //    "exec": "$HOME/.config/waybar/ws-hypr.sh",
+    //    "exec-if": "exit 0",
+    //    "signal": 8
+    //},
+    //"custom/pacman": {
+    //    "format": " {}\n",
+    //    "interval": 1800,
+    //    "exec": "checkupdates | wc -l",
+    //    "exec-if": "exit 0",
+    //    "signal": 8
+    //},
+    //"custom/media": {
+    //    "format": "{icon} {}",
+    //    "return-type": "json",
+    //    "max-length": 40,
+    //    "format-icons": {
+    //        "spotify": "",
+    //        "default": "🎜"
+    //    },
+    //    "escape": true,
+    //    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+    //    // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    //},
+    //"wlr/taskbar": {
+    //    "format": "{icon}",
+    //    "icon-size": 18,
+    //    "on-click": "activate",
+    //    "app_ids-mapping": {
+    //            "firefoxdeveloperedition": "firefox-developer-edition"
+    //    }
+    //}
 }
 
