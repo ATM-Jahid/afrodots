@@ -18,17 +18,17 @@ A short list of daily used programs follows.
 
 - Shells: [fish](https://fishshell.com), [xonsh](https://xon.sh)
 - Emulators: [afro-st](https://github.com/ATM-Jahid/afro-st),
-  [alacritty](https://github.com/alacritty/alacritty)
+  [foot](https://codeberg.org/dnkl/foot)
 - Editor: [neovim](https://neovim.io)
-- Window Manager: [bspwm](https://github.com/baskerville/bspwm)
-- Keyhandler: [sxhkd](https://github.com/baskerville/sxhkd)
-- Wallsetter: [nitrogen](https://github.com/l3ib/nitrogen)
+- WM/Compositor: [bspwm](https://github.com/baskerville/bspwm),
+  [hyprland](https://github.com/hyprwm/Hyprland)
+- Wallsetter: [nitrogen](https://github.com/l3ib/nitrogen),
+  [swaybg](https://github.com/swaywm/swaybg)
 - Screenlocker: [physlock](https://github.com/muennich/physlock)
-- Compositor: [picom](https://github.com/yshui/picom)
-- Launchers: [dmenu](https://tools.suckless.org/dmenu),
-  [rofi](https://github.com/davatorium/rofi)
+- Launchers: [rofi](https://github.com/davatorium/rofi),
+  [fuzzel](https://codeberg.org/dnkl/fuzzel)
 - Status Bar: [tint2](https://gitlab.com/o9000/tint2),
-  [polybar](https://github.com/polybar/polybar)
+  [waybar](https://github.com/Alexays/Waybar)
 - Task Manager: [btop](https://github.com/aristocratos/btop)
 - Notification-daemon: [dunst](https://github.com/dunst-project/dunst)
 - File Managers: [nnn](https://github.com/jarun/nnn),
@@ -37,7 +37,7 @@ A short list of daily used programs follows.
   [mpv](https://mpv.io)
 - Document Viewer: [zathura](https://pwmt.org/projects/zathura)
 - Fonts: [Fira Code](https://github.com/tonsky/FiraCode),
-  [DejaVu](https://dejavu-fonts.github.io)
+  [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono)
 - Theme: [Materia](https://github.com/nana-4/materia-theme)
 
 ## License

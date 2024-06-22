@@ -15,13 +15,14 @@
         "window-rewrite": {
             "class<foot>": "",
             "class<Alacritty>": "",
-            "class<firefoxdeveloperedition>": "󰈹",
-            "class<vivaldi-stable>": "",
+            "class<firefoxdeveloperedition>": "",
+            "class<Chromium>": "",
             "class<FreeTube>": "",
             "class<org.pwmt.zathura>": "",
             "class<.*Gimp.*>": "",
             "class<krita>": "",
             "class<org.inkscape.Inkscape>": "󰫨",
+            "class<Ovito>": "󰹻",
         },
     },
     //"keyboard-state": {
@@ -119,16 +120,17 @@
     //},
     "battery": {
         "states": {
-            // "good": 95,
+            "excess": 101,
+            "good": 97,
             "warning": 30,
             "critical": 15
         },
         "format": "{capacity}\n{icon}",
         "format-charging": "{capacity}\n",
         "format-plugged": "{capacity}\n",
-        //"format-alt": "{time}\n{icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
+        "format-excess": "9X\n{icon}",
+        // "full-at": 95, // makes the capacity 100 at >= <value>
+        "format-full": "9Y\n{icon}", // works only when charging & at 100
         "format-icons": ["", "", "", "", ""]
     },
     "battery#bat2": {

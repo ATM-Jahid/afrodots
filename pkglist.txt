@@ -20,8 +20,10 @@ openssh
 fish
 xonsh
 >python-prompt_toolkit
-*st
+*afro-st
+wezterm
 alacritty
+foot
 
 ## Documentation
 man-db
@@ -35,12 +37,19 @@ xorg-xinit
 brightnessctl
 xclip
 
-## Window Manager & Co
+## WM/Compositor & Co
 bspwm
 sxhkd
 picom
 nitrogen
+hyprland
+waybar
+swaybg
 physlock
+copyq
+flameshot
+grim
+slurp
 
 ## Network
 networkmanager
@@ -60,10 +69,12 @@ blueman
 ## Launchers/Notifiers
 rofi
 dmenu
+fuzzel
 dunst
 
-## Browser
+## Browsers
 firefox-developer-edition
+chromium
 
 ## File Managers & Co
 nnn
@@ -77,13 +88,14 @@ thunar
 mpv
 sxiv
 gimp
+krita
+inkscape
 ffmpeg
-flameshot
 imagemagick
 
 ## Book Reader
 zathura
-zathura-pdf-mupdf
+zathura-pdf-poppler
 zathura-djvu
 
 ## System Information
@@ -98,14 +110,16 @@ neofetch
 transmission-cli
 
 ## Fonts
-ttf-fira-code
+ttf-firacode-nerd
+ttf-jetbrains-mono-nerd
+otf-font-awesome
 ttf-dejavu
 noto-fonts
+noto-fonts-emoji
 ttf-unifont
 gnu-free-fonts
 ttf-liberation
 wqy-zenhei
-otf-font-awesome
 
 ## Themes
 materia-gtk-theme
