@@ -1,5 +1,5 @@
 ! ! Font
-*.font: Fira Code:pixelsize=18
+*.font: FiraCode Nerd Font:pixelsize=18
 ! ! Special
 *.background:  #001e26
 *.foreground:  #9cc2c3
