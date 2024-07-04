@@ -1,8 +1,13 @@
+-- To make tokyonight transparent
 return {
-  require("tokyonight").setup({
-    transparent = true,
-  }),
-  require("notify").setup({
-    background_colour = "#999999",
-  }),
+  {
+    "folke/tokyonight.nvim",
+    opts = {
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
+    },
+  },
 }
