@@ -9,11 +9,24 @@ return {
       }
       opts.mapping = cmp.mapping.preset.insert({
         ["<CR>"] = cmp.mapping.confirm({ select = false }),
-        ["<S-CR>"] = cmp.mapping.confirm({
+        ["<M-CR>"] = cmp.mapping.confirm({
           behavior = cmp.ConfirmBehavior.Replace,
           select = true,
         }),
+        ["<M-Tab>"] = cmp.mapping(function()
+          if cmp.visible() then
+            cmp.select_next_item()
+          end
+        end),
       })
+      opts.window = {
+        completion = {
+          winblend = 0,
+        },
+        documentation = {
+          winblend = 0,
+        },
+      }
     end,
   },
 }
