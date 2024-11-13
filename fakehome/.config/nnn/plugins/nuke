@@ -280,7 +280,7 @@ abspath() {
 # storing the result to a tmp file is faster than calling listimages twice
 listimages() {
 	find -L "///${1%/*}" -maxdepth 1 -type f -print0 |
-		grep -izZE '\.(jpe?g|png|gif|webp|tiff|bmp|ico|svg)$' |
+		grep -izZE '\.(jpe?g|png|svg|gif|webp|tiff|bmp|ppm)$' |
 		sort -z | tee "$tmp"
 }
 

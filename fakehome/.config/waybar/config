@@ -15,7 +15,7 @@
         "window-rewrite": {
             "class<foot>": "",
             "class<Alacritty>": "",
-            "class<firefoxdeveloperedition>": "",
+            "class<firefox-developer-edition>": "",
             "class<Chromium>": "",
             "class<FreeTube>": "",
             "class<org.pwmt.zathura>": "",

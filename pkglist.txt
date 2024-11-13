@@ -79,8 +79,6 @@ chromium
 ## File Managers & Co
 nnn
 >trash-cli
->*tabbed
->xdotool
 broot
 thunar
 
@@ -104,7 +102,7 @@ tint2
 >gsimplecal
 btop
 conky
-neofetch
+fastfetch
 
 ## Torrent
 transmission-cli
