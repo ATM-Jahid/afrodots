@@ -1,3 +1,4 @@
+-- For colorful window separation
 return {
   {
     "nvim-zh/colorful-winsep.nvim",
