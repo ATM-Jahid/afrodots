@@ -23,7 +23,7 @@
             "class<.*Gimp.*>": "",
             "class<krita>": "",
             "class<org.inkscape.Inkscape>": "",
-            "class<Ovito>": "󰹻",
+            "class<org.ovito.ovito>": "󰹻",
         },
     },
     //"keyboard-state": {

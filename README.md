@@ -41,6 +41,6 @@ A short list of daily used programs follows.
 - Theme: [Materia](https://github.com/nana-4/materia-theme)
 
 ## License
-Copyright (C) 2020-2024 ATM Jahid Hasan<br>
+Copyright (C) 2020-2025 ATM Jahid Hasan<br>
 **afrodots** is released under the
 [GNU AGPL](https://www.gnu.org/licenses/agpl-3.0.en.html).

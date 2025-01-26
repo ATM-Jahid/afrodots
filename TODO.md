@@ -1,5 +1,8 @@
 # TODO
 Things that I need to fix/implement.
 
+- Fix nuke
+- Update README
 - Update pkglist
-- Do not move to hypr ecosystem
+- Make tmux better
+- Change cursor with a script

@@ -84,7 +84,7 @@ thunar
 
 ## Media Openers/Manipulators
 mpv
-sxiv
+nsxiv
 gimp
 krita
 inkscape
