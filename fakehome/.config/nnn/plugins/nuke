@@ -287,7 +287,7 @@ listimages() {
 load_dir() {
 	abspath "$2"
 	tmp="${TMPDIR:-/tmp}/nuke_$$"
-	trap 'rm -f $tmp' EXIT
+	trap 'rm -f -- "$tmp"' EXIT
 	count="$(listimages "$abs_target" | grep -a -m 1 -ZznF "$abs_target" | cut -d: -f1)"
 
 	if [ -n "$count" ]; then
@@ -415,7 +415,7 @@ handle_multimedia() {
 		#                  "${FPATH}";
 		#     then
 		#         convert -- "${preview_png}" "${IMAGE_CACHE_PATH}" \
-		#             && rm "${preview_png}" \
+		#             && rm -- "${preview_png}" \
 		#             && exit 6
 		#     else
 		#         exit 1
@@ -494,23 +494,26 @@ handle_mime() {
 		# exit 2;;
 
 	## DjVu
-	image/vnd.djvu)
-		if type djvutxt >/dev/null 2>&1; then
-			## Preview as text conversion (requires djvulibre)
-			djvutxt "${FPATH}" | eval "$PAGER"
-			exit 0
-		elif type exiftool >/dev/null 2>&1; then
-			exiftool "${FPATH}" | eval "$PAGER"
-			exit 0
-		fi
-		exit 1
-		;;
+	# image/vnd.djvu)
+	#   if type djvutxt >/dev/null 2>&1; then
+	#       ## Preview as text conversion (requires djvulibre)
+	#       djvutxt "${FPATH}" | eval "$PAGER"
+	#       exit 0
+	#   elif type exiftool >/dev/null 2>&1; then
+	#       exiftool "${FPATH}" | eval "$PAGER"
+	#       exit 0
+	#   fi
+	#   exit 1
+	#   ;;
 	esac
 }
 
 handle_fallback() {
 	if [ "$GUI" -ne 0 ]; then
-		if type xdg-open >/dev/null 2>&1; then
+		if type $EDITOR >/dev/null 2>&1; then
+			"$EDITOR" "${FPATH}"
+			exit 0
+		elif type xdg-open >/dev/null 2>&1; then
 			nohup xdg-open "${FPATH}" >/dev/null 2>&1 &
 			exit 0
 		elif type open >/dev/null 2>&1; then
@@ -523,56 +526,56 @@ handle_fallback() {
 	exit 1
 }
 
-handle_blocked() {
-	case "${MIMETYPE}" in
-	application/x-sharedlib)
-		exit 0
-		;;
+# handle_blocked() {
+#   case "${MIMETYPE}" in
+#   application/x-sharedlib)
+#       exit 0
+#       ;;
+#
+#   application/x-shared-library-la)
+#       exit 0
+#       ;;
+#
+#   application/x-executable)
+#       exit 0
+#       ;;
+#
+#   application/x-shellscript)
+#       exit 0
+#       ;;
+#
+#   application/octet-stream)
+#       exit 0
+#       ;;
+#   esac
+# }
 
-	application/x-shared-library-la)
-		exit 0
-		;;
-
-	application/x-executable)
-		exit 0
-		;;
-
-	application/x-shellscript)
-		exit 0
-		;;
-
-	application/octet-stream)
-		exit 0
-		;;
-	esac
-}
-
-handle_bin() {
-	case "${MIMETYPE}" in
-	application/x-executable | application/x-shellscript)
-		clear
-		echo '-------- Executable File --------' && file --dereference --brief -- "${FPATH}"
-		printf "Run executable (y/N/'a'rgs)? "
-		read -r answer
-		case "$answer" in
-		[Yy]*) exec "${FPATH}" ;;
-		[Aa]*)
-			printf "args: "
-			read -r args
-			exec "${FPATH}" "$args"
-			;;
-		[Nn]*) exit ;;
-		esac
-		;;
-	esac
-}
+# handle_bin() {
+#   case "${MIMETYPE}" in
+#   application/x-executable | application/x-shellscript)
+#       clear
+#       echo '-------- Executable File --------' && file --dereference --brief -- "${FPATH}"
+#       printf "Run executable (y/N/'a'rgs)? "
+#       read -r answer
+#       case "$answer" in
+#       [Yy]*) exec "${FPATH}" ;;
+#       [Aa]*)
+#           printf "args: "
+#           read -r args
+#           exec "${FPATH}" "$args"
+#           ;;
+#       [Nn]*) exit ;;
+#       esac
+#       ;;
+#   esac
+# }
 
 MIMETYPE="$(file -bL --mime-type -- "${FPATH}")"
 handle_extension
 handle_multimedia "${MIMETYPE}"
 handle_mime "${MIMETYPE}"
-[ "$BIN" -ne 0 ] && [ -x "${FPATH}" ] && handle_bin
-handle_blocked "${MIMETYPE}"
+# [ "$BIN" -ne 0 ] && [ -x "${FPATH}" ] && handle_bin
+# handle_blocked "${MIMETYPE}"
 handle_fallback
 
 exit 1
