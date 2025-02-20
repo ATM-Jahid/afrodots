@@ -41,3 +41,7 @@ Xft.hintstyle: hintfull
 Xft.hinting: 1
 Xft.antialias: 1
 Xft.rgba: rgb
+
+! ! Cursor settings
+Xcursor.theme: AC-Future
+Xcursor.size: 40

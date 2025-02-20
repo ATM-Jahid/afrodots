@@ -4,6 +4,9 @@ import os
 import sys
 import subprocess
 
+# All "change" functions basically do the same thing
+# Refactor this badly written script
+
 def change_gtk_settings(settings_path, theme, size):
     lines = []
     with open(settings_path, 'r') as file:
@@ -39,6 +42,20 @@ def change_hyprland_settings(settings_path, theme, size):
             else:
                 file.write(line)
 
+def change_xresources(settings_path, theme, size):
+    lines = []
+    with open(settings_path, 'r') as file:
+        lines = file.readlines()
+
+    with open(settings_path, 'w') as file:
+        for line in lines:
+            if line.startswith('Xcursor.theme'):
+                file.write(f'Xcursor.theme: {theme}\n')
+            elif line.startswith('Xcursor.size'):
+                file.write(f'Xcursor.size: {size}\n')
+            else:
+                file.write(line)
+
 def set_cursor(cursor_theme, cursor_size):
     print(f'Trying to set the "{cursor_theme}" ({cursor_size} px) theme')
 
@@ -69,6 +86,16 @@ def set_cursor(cursor_theme, cursor_size):
     # Hyprctl (also updates dconf)
     print('From Hyprctl (ok or not):')
     subprocess.run(['hyprctl', 'setcursor', f'{cursor_theme}', f'{cursor_size}'])
+
+    # Change Xresources
+    xresources_path = os.path.expanduser('~/.Xresources')
+    change_xresources(xresources_path, cursor_theme, cursor_size)
+
+    # Update and check xrdb
+    subprocess.run(['xrdb', xresources_path])
+    xrdb_out = subprocess.run('xrdb -query | grep Xcursor',
+                              shell=True, capture_output=True, text=True)
+    print(f'From Xrdb query:\n{xrdb_out.stdout}')
 
 def main():
     cur_theme = sys.argv[1]
