@@ -8,7 +8,7 @@ After cloning this repository, issuing the following commands will populate
 the `$HOME` directory with symbolic links to the files stored in
 `afrodots/fakehome`.
 
-	cd /path/to/afrodots
+	cd path/to/afrodots
 	stow -v --target=$HOME fakehome
 
 ## Packages
@@ -33,7 +33,7 @@ A short list of daily used programs follows.
 - Notification-daemon: [dunst](https://github.com/dunst-project/dunst)
 - File Managers: [nnn](https://github.com/jarun/nnn),
   [broot](https://dystroy.org/broot)
-- Media Openers: [sxiv](https://github.com/muennich/sxiv),
+- Media Openers: [nsxiv](https://github.com/nsxiv/nsxiv),
   [mpv](https://mpv.io)
 - Document Viewer: [zathura](https://pwmt.org/projects/zathura)
 - Fonts: [Fira Code](https://github.com/tonsky/FiraCode),
