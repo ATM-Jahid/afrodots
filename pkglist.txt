@@ -11,6 +11,7 @@ neovim
 git
 stow
 fzf
+bat
 curl
 wget
 gnupg
@@ -36,22 +37,28 @@ texinfo
 xorg
 xorg-drivers
 xorg-xinit
-brightnessctl
-xclip
 
 ## WM/Compositor & Co
 bspwm
 sxhkd
 picom
+tint2
+>pacman-contrib
+>gsimplecal
 nitrogen
+flameshot
+xclip
+
 hyprland
 waybar
 swaybg
-physlock
-copyq
-flameshot
 grim
 slurp
+wl-clipboard
+
+physlock
+brightnessctl
+copyq
 
 ## Network
 networkmanager
@@ -99,9 +106,6 @@ zathura-pdf-poppler
 zathura-djvu
 
 ## System Information
-tint2
->pacman-contrib
->gsimplecal
 btop
 conky
 fastfetch
