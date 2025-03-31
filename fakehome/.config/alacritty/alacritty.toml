@@ -41,8 +41,8 @@ family = "JetBrainsMono NFM"
 
 [[keyboard.bindings]]
 action = "SpawnNewInstance"
-key = "Return"
-mods = "Control|Shift"
+key = "n"
+mods = "Command"
 
 [window]
 opacity = 0.8
