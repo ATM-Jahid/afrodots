@@ -15,6 +15,7 @@ end
 -- For example, changing the color scheme:
 --config.color_scheme = "tokyonight_storm"
 
+-- To avoid clash with broot `cd on quit`
 config.keys = {
 	{
 		key = "Enter",
@@ -34,6 +35,8 @@ config.window_padding = {
 	top = 0,
 	bottom = 0,
 }
+
+config.enable_wayland = false
 
 -- and finally, return the configuration to wezterm
 return config
