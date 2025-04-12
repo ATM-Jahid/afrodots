@@ -89,7 +89,7 @@ chromium
 nnn
 >trash-cli
 broot
-thunar
+yazi
 
 ## Media Openers/Manipulators
 mpv
