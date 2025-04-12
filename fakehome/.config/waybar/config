@@ -11,10 +11,11 @@
     "hyprland/workspaces": {
         "format": "<sub>{icon}</sub>\n{windows}\n",
         "format-window-separator": "\n",
-        "window-rewrite-default": "",
+        "window-rewrite-default": "",
         "window-rewrite": {
-            "class<foot>": "",
-            "class<Alacritty>": "",
+            "class<foot>": "󰽒",
+            "class<Alacritty>": "󰑣",
+            "class<com.mitchellh.ghostty>": "󰊠",
             "class<firefox-developer-edition>": "",
             "class<Chromium>": "",
             "class<FreeTube>": "",

@@ -1,0 +1,19 @@
+# Run `ghostty +show-config --default --docs` to view a list of
+# all available config options and their default values.
+#
+# Additionally, each config option is also explained in detail
+# on Ghostty's website, at https://ghostty.org/docs/config.
+
+font-size = 9
+
+background-opacity = 0.8
+theme = tokyonight_night
+
+keybind = super+n=new_window
+#keybind = ctrl+shift+space=write_scrollback_file:open
+
+shell-integration-features = no-cursor
+cursor-style-blink = false
+cursor-invert-fg-bg = true
+
+window-decoration = none

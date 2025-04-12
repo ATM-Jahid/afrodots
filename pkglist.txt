@@ -24,8 +24,8 @@ fish
 xonsh
 >python-prompt_toolkit
 *afro-st
-wezterm
 alacritty
+ghostty
 foot
 
 ## Documentation

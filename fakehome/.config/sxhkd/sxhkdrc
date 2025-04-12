@@ -8,7 +8,7 @@ super + d
 
 # terminal emulator
 super + {u,Return}
-    {wezterm,alacritty}
+    {ghostty,alacritty}
 
 # program launcher
 super + {@space,x}
