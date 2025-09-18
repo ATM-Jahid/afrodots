@@ -7,7 +7,7 @@
 font-size = 9
 
 background-opacity = 0.8
-theme = tokyonight_night
+theme = Starlight
 
 keybind = super+n=new_window
 #keybind = ctrl+shift+space=write_scrollback_file:open

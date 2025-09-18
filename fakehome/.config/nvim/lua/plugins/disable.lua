@@ -1,5 +1,5 @@
 -- Disable unnecessary plugins
 return {
   { "catppuccin", enabled = false },
-  { "echasnovski/mini.pairs", enabled = false },
+  { "nvim-mini/mini.pairs", enabled = false },
 }
