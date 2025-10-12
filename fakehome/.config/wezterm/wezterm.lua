@@ -1,5 +1,7 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
+local io = require("io")
+local os = require("os")
 
 -- This table will hold the configuration.
 local config = {}
@@ -12,15 +14,42 @@ end
 
 -- This is where you actually apply your config choices
 
--- For example, changing the color scheme:
---config.color_scheme = "tokyonight_storm"
+-- Open scrollback buffer with neovim
+wezterm.on("trigger-nvim-with-scrollback", function(window, pane)
+	local text = pane:get_lines_as_text(pane:get_dimensions().scrollback_rows)
 
--- To avoid clash with broot `cd on quit`
+	local tmp_file = os.tmpname()
+	local f = assert(io.open(tmp_file, "w+"))
+	f:write(text)
+	f:flush()
+	f:close()
+
+	window:perform_action(
+		wezterm.action.SpawnCommandInNewWindow({
+			args = { "nvim", tmp_file },
+		}),
+		pane
+	)
+end)
+
 config.keys = {
 	{
+		-- Avoid clash with broot `cd on quit`
 		key = "Enter",
 		mods = "ALT",
 		action = wezterm.action.DisableDefaultAssignment,
+	},
+	{
+		-- This clashes with Quick Select Mode
+		key = "Space",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.EmitEvent("trigger-nvim-with-scrollback"),
+	},
+	{
+		-- Remap Quick Select Mode
+		key = "S",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.QuickSelect,
 	},
 }
 
