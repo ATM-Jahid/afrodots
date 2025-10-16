@@ -24,9 +24,9 @@ fish
 xonsh
 >python-prompt_toolkit
 *afro-st
-alacritty
-ghostty
 foot
+wezterm
+kitty
 
 ## Documentation
 man-db
