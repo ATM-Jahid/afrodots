@@ -17,7 +17,7 @@ function n --wraps nnn --description 'support nnn quit and change directory'
     # NOTE: NNN_TMPFILE is fixed, should not be modified
 
     set -x NNN_TMPFILE "$HOME/.config/nnn/.lastd"
-    set -x NNN_COLORS "4123"
+    set -x NNN_COLORS 4123
     set -x NNN_TRASH 1
     set -x NNN_OPENER "$HOME/.config/nnn/plugins/nuke"
     set -x NNN_BMS "c:~/Documents/Coding;w:~/Pictures/WallE;b:~/Documents/Books"
