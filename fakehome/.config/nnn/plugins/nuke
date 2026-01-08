@@ -84,15 +84,9 @@ if [ -n "$ext" ]; then
 	ext="$(printf "%s" "${ext}" | tr '[:upper:]' '[:lower:]')"
 fi
 
-is_mac() {
-	uname | grep -q "Darwin"
-}
-
 handle_pdf() {
 	if [ "$GUI" -ne 0 ]; then
-		if is_mac; then
-			nohup open "${FPATH}" >/dev/null 2>&1 &
-		elif type zathura >/dev/null 2>&1; then
+		if type zathura >/dev/null 2>&1; then
 			nohup zathura "${FPATH}" >/dev/null 2>&1 &
 		else
 			return
@@ -102,8 +96,6 @@ handle_pdf() {
 		pdftotext -l 10 -nopgbrk -q -- "${FPATH}" - | eval "$PAGER"
 	elif type mutool >/dev/null 2>&1; then
 		mutool draw -F txt -i -- "${FPATH}" 1-10 | eval "$PAGER"
-	elif type exiftool >/dev/null 2>&1; then
-		exiftool "${FPATH}" | eval "$PAGER"
 	else
 		return
 	fi
@@ -111,16 +103,8 @@ handle_pdf() {
 }
 
 handle_audio() {
-	if type mocp >/dev/null 2>&1 && type mocq >/dev/null 2>&1; then
-		mocq "${FPATH}" "opener" >/dev/null 2>&1
-	elif type mpv >/dev/null 2>&1; then
+	if type mpv >/dev/null 2>&1; then
 		mpv "${FPATH}" >/dev/null 2>&1 &
-	elif type media_client >/dev/null 2>&1; then
-		media_client play "${FPATH}" >/dev/null 2>&1 &
-	elif type mediainfo >/dev/null 2>&1; then
-		mediainfo "${FPATH}" | eval "$PAGER"
-	elif type exiftool >/dev/null 2>&1; then
-		exiftool "${FPATH}" | eval "$PAGER"
 	else
 		return
 	fi
@@ -129,24 +113,11 @@ handle_audio() {
 
 handle_video() {
 	if [ "$GUI" -ne 0 ]; then
-		if is_mac; then
-			nohup open "${FPATH}" >/dev/null 2>&1 &
-		elif type smplayer >/dev/null 2>&1; then
-			nohup smplayer "${FPATH}" >/dev/null 2>&1 &
-		elif type mpv >/dev/null 2>&1; then
+		if type mpv >/dev/null 2>&1; then
 			nohup mpv "${FPATH}" >/dev/null 2>&1 &
 		else
 			return
 		fi
-	elif type ffmpegthumbnailer >/dev/null 2>&1; then
-		# Thumbnail
-		[ -d "${IMAGE_CACHE_PATH}" ] || mkdir "${IMAGE_CACHE_PATH}"
-		ffmpegthumbnailer -i "${FPATH}" -o "${IMAGE_CACHE_PATH}/${FNAME}.jpg" -s 0
-		viu -n "${IMAGE_CACHE_PATH}/${FNAME}.jpg" | eval "$PAGER"
-	elif type mediainfo >/dev/null 2>&1; then
-		mediainfo "${FPATH}" | eval "$PAGER"
-	elif type exiftool >/dev/null 2>&1; then
-		exiftool "${FPATH}" | eval "$PAGER"
 	else
 		return
 	fi
@@ -210,11 +181,11 @@ handle_extension() {
 
 	## BitTorrent
 	torrent)
-		if type rtorrent >/dev/null 2>&1; then
-			rtorrent "${FPATH}"
-			exit 0
-		elif type transmission-show >/dev/null 2>&1; then
+		if type transmission-show >/dev/null 2>&1; then
 			transmission-show -- "${FPATH}"
+			exit 0
+		elif type rtorrent >/dev/null 2>&1; then
+			rtorrent "${FPATH}"
 			exit 0
 		fi
 		exit 1
@@ -230,39 +201,14 @@ handle_extension() {
 		exit 1
 		;;
 
-	## Markdown
-	md)
-		if type glow >/dev/null 2>&1; then
-			glow -sdark "${FPATH}" | eval "$PAGER"
-			exit 0
-		elif type lowdown >/dev/null 2>&1; then
-			lowdown -Tterm "${FPATH}" | eval "$PAGER"
-			exit 0
-		fi
-		;;
-
 	## HTML
 	htm | html | xhtml)
 		## Preview as text conversion
-		if type w3m >/dev/null 2>&1; then
+		if type "$BROWSER" >/dev/null 2>&1; then
+			"$BROWSER" "${FPATH}"
+			exit 0
+		elif type w3m >/dev/null 2>&1; then
 			w3m -dump "${FPATH}" | eval "$PAGER"
-			exit 0
-		elif type lynx >/dev/null 2>&1; then
-			lynx -dump -- "${FPATH}" | eval "$PAGER"
-			exit 0
-		elif type elinks >/dev/null 2>&1; then
-			elinks -dump "${FPATH}" | eval "$PAGER"
-			exit 0
-		fi
-		;;
-
-	## JSON
-	json)
-		if type jq >/dev/null 2>&1; then
-			jq --color-output . "${FPATH}" | eval "$PAGER"
-			exit 0
-		elif type python >/dev/null 2>&1; then
-			python -m json.tool -- "${FPATH}" | eval "$PAGER"
 			exit 0
 		fi
 		;;
@@ -308,30 +254,15 @@ handle_multimedia() {
 	## Image
 	image/*)
 		if [ "$GUI" -ne 0 ]; then
-			if is_mac; then
-				nohup open "${FPATH}" >/dev/null 2>&1 &
-				exit 0
-			elif type imv >/dev/null 2>&1; then
-				load_dir imv "${FPATH}" >/dev/null 2>&1 &
-				exit 0
-			elif type imvr >/dev/null 2>&1; then
-				load_dir imvr "${FPATH}" >/dev/null 2>&1 &
+			if type nsxiv >/dev/null 2>&1; then
+				load_dir nsxiv "${FPATH}" >/dev/null 2>&1 &
 				exit 0
 			elif type sxiv >/dev/null 2>&1; then
 				load_dir sxiv "${FPATH}" >/dev/null 2>&1 &
 				exit 0
-			elif type nsxiv >/dev/null 2>&1; then
-				load_dir nsxiv "${FPATH}" >/dev/null 2>&1 &
-				exit 0
 			fi
-		elif type viu >/dev/null 2>&1; then
-			viu -n "${FPATH}" | eval "$PAGER"
-			exit 0
 		elif type img2txt >/dev/null 2>&1; then
 			img2txt --gamma=0.6 -- "${FPATH}" | eval "$PAGER"
-			exit 0
-		elif type exiftool >/dev/null 2>&1; then
-			exiftool "${FPATH}" | eval "$PAGER"
 			exit 0
 		fi
 		exit 7
@@ -379,7 +310,9 @@ handle_fallback() {
 		if type $EDITOR >/dev/null 2>&1; then
 			"$EDITOR" "${FPATH}"
 			exit 0
-		elif type xdg-open >/dev/null 2>&1; then
+		fi
+	else
+		if type xdg-open >/dev/null 2>&1; then
 			nohup xdg-open "${FPATH}" >/dev/null 2>&1 &
 			exit 0
 		elif type open >/dev/null 2>&1; then
