@@ -5,12 +5,6 @@ return {
     opts = {
       style = "storm",
       transparent = true,
-      -- Bufferline transparency
-      on_highlights = function(hl, c)
-        hl.TabLineFill = {
-          bg = c.none,
-        }
-      end,
     },
   },
 }
