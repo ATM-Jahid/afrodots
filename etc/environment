@@ -5,4 +5,4 @@
 #
 EDITOR=nvim
 PAGER="less -R"
-BROWSER=firefox-developer-edition
+BROWSER=firefox

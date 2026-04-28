@@ -1,7 +1,9 @@
 # afrodots
+
 Atomsky's dotfiles
 
 ## Installation
+
 **afrodots** uses [Git](https://git-scm.com) along with
 [Stow](https://www.gnu.org/software/stow) to manage configuration files.
 After cloning this repository, issuing the following commands will populate
@@ -12,6 +14,7 @@ the `$HOME` directory with symbolic links to the files stored in
 	stow -v --target=$HOME fakehome
 
 ## Packages
+
 `pkglist.txt` lists the packages to be installed from
 [Arch](https://archlinux.org) repositories.
 A short list of daily used programs follows.
@@ -41,6 +44,7 @@ A short list of daily used programs follows.
 - Theme: [Materia](https://github.com/nana-4/materia-theme)
 
 ## License
-Copyright (C) 2020-2025 ATM Jahid Hasan<br>
+
+Copyright (C) 2020-2026 ATM Jahid Hasan<br>
 **afrodots** is released under the
 [GNU AGPL](https://www.gnu.org/licenses/agpl-3.0.en.html).

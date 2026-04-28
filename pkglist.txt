@@ -82,7 +82,7 @@ fuzzel
 dunst
 
 ## Browsers
-firefox-developer-edition
+firefox
 chromium
 
 ## File Managers & Co

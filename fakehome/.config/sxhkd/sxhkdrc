@@ -4,7 +4,7 @@
 
 # web browser
 super + d
-    firefox-developer-edition
+    firefox
 
 # terminal emulator
 super + {u,Return}
