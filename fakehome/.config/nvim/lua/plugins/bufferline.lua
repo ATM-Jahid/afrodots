@@ -10,6 +10,7 @@ return {
     opts = {
       options = {
         show_buffer_close_icons = false,
+        show_close_icon = false,
         separator_style = "slope",
       },
       highlights = {
@@ -18,6 +19,10 @@ return {
         separator_visible = { bg = color_visible, fg = color_bar },
         separator_selected = { bg = color_selected, fg = color_bar },
         background = { bg = color_inactive },
+        tab = { bg = color_inactive },
+        tab_selected = { bg = color_selected },
+        tab_separator = { bg = color_inactive, fg = color_bar },
+        tab_separator_selected = { bg = color_selected, fg = color_bar },
         buffer_visible = { bg = color_visible },
         buffer_selected = { bg = color_selected },
         diagnostic = { bg = color_inactive },
