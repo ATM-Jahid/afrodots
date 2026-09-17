@@ -21,7 +21,7 @@ hl.monitor({
 -- })
 
 hl.on("hyprland.start", function()
-	hl.exec_cmd("waybar")
+	hl.exec_cmd("quickshell -n -p ~/builds/skeg")
 	hl.exec_cmd("swaybg -i $(find ~/Pictures/WallE -type f | shuf -n 1) -m fill")
 	hl.exec_cmd("copyq --start-server hide")
 	hl.exec_cmd("xrdb -load ~/.Xresources")

@@ -313,3 +313,4 @@ x-scheme-handler/telnet=ktelnetservice6.desktop;
 x-scheme-handler/zoommtg=Zoom.desktop;
 x-scheme-handler/zoomphonecall=Zoom.desktop;
 x-scheme-handler/zoomus=Zoom.desktop;
+x-scheme-handler/codex=chatgpt.desktop
