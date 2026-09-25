@@ -171,6 +171,7 @@ hl.bind(mainMod .. " + ALT + Q", hl.dsp.exit())
 
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + V", hl.dsp.window.float())
+hl.bind(mainMod .. " + SHIFT + P", hl.dsp.window.pin())
 
 hl.bind(mainMod .. " + A", hl.dsp.layout("addmaster"))
 hl.bind(mainMod .. " + R", hl.dsp.layout("removemaster"))

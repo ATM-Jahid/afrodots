@@ -1,0 +1,4 @@
+[[mgr.prepend_keymap]]
+on = "<C-w>"
+run = 'shell -- pkill swaybg; swaybg -m fill -i %h >/dev/null 2>&1 &'
+desc = "Set wallpaper"
