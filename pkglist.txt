@@ -25,8 +25,8 @@ xonsh
 >python-prompt_toolkit
 *afro-st
 foot
-wezterm
 kitty
+wezterm
 
 ## Documentation
 man-db
@@ -50,7 +50,6 @@ flameshot
 xclip
 
 hyprland
-waybar
 swaybg
 grim
 slurp
