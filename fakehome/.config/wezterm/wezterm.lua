@@ -57,6 +57,7 @@ config.color_scheme = "Solarized Dark Higher Contrast"
 config.font_size = 9
 
 config.window_background_opacity = 0.8
+config.wayland_window_background_blur = true
 config.hide_tab_bar_if_only_one_tab = true
 config.window_padding = {
 	left = 3,
