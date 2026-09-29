@@ -1,12 +1,30 @@
 [user]
 	name = ATM Jahid Hasan
 	email = atmjahidhasan@gmail.com
-[merge]
-	conflictstyle = diff3
-	tool = nvimdiff3
+
 [credential]
 	helper = cache
-[alias]
-	loag = log --oneline --all --graph
+
 [init]
 	defaultBranch = main
+
+[core]
+	pager = delta
+
+[delta]
+	dark = true
+	navigate = true
+	line-numbers = true
+
+[interactive]
+	diffFilter = delta --color-only
+
+[diff]
+	tool = nvimdiff
+
+[merge]
+	conflictStyle = zdiff3
+	tool = nvimdiff3
+
+[alias]
+	loag = log --oneline --all --graph

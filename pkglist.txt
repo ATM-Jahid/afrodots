@@ -7,23 +7,25 @@ linux
 linux-firmware
 
 ## Misc Term Utilities
-neovim
-git
-stow
-fzf
 bat
-curl
-wget
-gnupg
-openssh
 ripgrep
 fd
+fzf
+curl
+wget
+openssh
+gnupg
+git
+git-delta
+stow
+
+## Editor
+neovim
 
 ## Shells & Emulators
 fish
 xonsh
 >python-prompt_toolkit
-*afro-st
 foot
 kitty
 wezterm
@@ -82,7 +84,6 @@ dunst
 
 ## Browsers
 firefox
-chromium
 
 ## File Managers & Co
 nnn
