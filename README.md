@@ -10,8 +10,10 @@ After cloning this repository, issuing the following commands will populate
 the `$HOME` directory with symbolic links to the files stored in
 `afrodots/fakehome`.
 
-	cd path/to/afrodots
-	stow -v --target=$HOME fakehome
+```sh
+cd path/to/afrodots
+stow -v --target=$HOME fakehome
+```
 
 ## Packages
 
@@ -20,8 +22,8 @@ the `$HOME` directory with symbolic links to the files stored in
 A short list of daily used programs follows.
 
 - Shells: [fish](https://fishshell.com), [xonsh](https://xon.sh)
-- Emulators: [afro-st](https://github.com/ATM-Jahid/afro-st),
-  [foot](https://codeberg.org/dnkl/foot)
+- Emulators: [foot](https://codeberg.org/dnkl/foot),
+  [kitty](https://sw.kovidgoyal.net/kitty/)
 - Editor: [neovim](https://neovim.io)
 - WM/Compositor: [bspwm](https://github.com/baskerville/bspwm),
   [hyprland](https://github.com/hyprwm/Hyprland)
@@ -31,10 +33,10 @@ A short list of daily used programs follows.
 - Launchers: [rofi](https://github.com/davatorium/rofi),
   [fuzzel](https://codeberg.org/dnkl/fuzzel)
 - Status Bar: [tint2](https://gitlab.com/o9000/tint2),
-  [waybar](https://github.com/Alexays/Waybar)
+  [skeg](https://github.com/ATM-Jahid/skeg)
 - Task Manager: [btop](https://github.com/aristocratos/btop)
 - Notification-daemon: [dunst](https://github.com/dunst-project/dunst)
-- File Managers: [nnn](https://github.com/jarun/nnn),
+- File Managers: [yazi](https://yazi-rs.github.io/),
   [broot](https://dystroy.org/broot)
 - Media Openers: [nsxiv](https://github.com/nsxiv/nsxiv),
   [mpv](https://mpv.io)
